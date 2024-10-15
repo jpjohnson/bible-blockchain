@@ -13,9 +13,9 @@ The bible text being used is the King James Version from https://openbible.com/t
 It stores the blockchain in bible.bin. 
 ### Menu Options
 
-*   1. Create Bible Blockchain**: Creates a new Bible blockchain from a file.
-*   2. Load Bible Blockchain**: Loads an existing Bible blockchain from a file.
-*   3. Exit**: Exits the program.
+*   1. **Create Bible Blockchain**: Creates a new Bible blockchain from a file.
+*   2. **Load Bible Blockchain**: Loads an existing Bible blockchain from a file.
+*   3. **Exit**: Exits the program.
 
 #### Load Bible
 After loading the Bible blockchain, you are prompted to search for a verse
