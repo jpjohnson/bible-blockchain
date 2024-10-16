@@ -152,6 +152,13 @@ func (b BibleBlockchain) isValid() bool {
 	return true
 }
 
+// toFile saves the BibleBlockchain instance to a file named "bible.bin" using gob encoding.
+//
+// Parameters:
+// - none
+//
+// Returns:
+// - none
 func (b BibleBlockchain) toFile() {
 	f, err := os.Create("bible.bin")
 	if err != nil {
@@ -185,6 +192,19 @@ func (b *BibleBlockchain) fromFile(file string) {
 	}
 }
 
+// splitBibleReference parses a Bible reference string into its components: book, chapter, verse, and text.
+//
+// The input string is expected to be in the format "Book Chapter:Verse Text", e.g., "2 Timothy 3:14 But".
+// The function extracts and returns the book name, chapter number, verse number, and the text following the reference.
+//
+// Parameters:
+// - reference: a string representing the Bible reference to be split.
+//
+// Returns:
+// - string: the name of the book.
+// - int: the chapter number.
+// - int: the verse number.
+// - string: the text associated with the verse.
 func splitBibleReference(reference string) (string, int, int, string) {
 	// 2 Timothy 3:14	But
 	partsA := strings.Split(reference, ":")
@@ -333,6 +353,12 @@ func LoadBibleBlockchain(readFile string) {
 	subMenu(BibleBlockchain)
 }
 
+// subMenu is a sub menu to search for bible verse given book, chapter, and verse.
+//
+// Parameters:
+// - BibleBlockchain: a BibleBlockchain instance representing the blockchain to search in.
+//
+// Return: None.
 func subMenu(BibleBlockchain BibleBlockchain) {
 
 	var book string
